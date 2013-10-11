@@ -1,84 +1,82 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-  <meta charset='utf-8'>
-  <title>NProgress: slim progress bars in JavaScript</title>
-  <link href='support/style.css' rel='stylesheet' />
-  <link href='nprogress.css' rel='stylesheet' />
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Nprogress by pchiwan</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  <meta name="viewport" content="width=device-width">
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic' rel='stylesheet' type='text/css'>
-  
-  <script src='vendor/jquery-1.10.js'></script>
-  <script src='nprogress.js'></script>
+  </head>
+  <body>
 
-  <script>if(location.hostname.match(/ricostacruz\.com$/)){var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-20473929-1"]),_gaq.push(["_trackPageview"]),function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}()}</script>
-</head>
+      <header>
+        <h1>Nprogress</h1>
+        <p>For slim progress bars like on YouTube, Medium, etc</p>
+      </header>
 
-<body style='display: none'>
-  <header class='page-header'>
-    <span class='nprogress-logo fade out'></span>
-    <h1>NProgress<i>.js</i></h1>
-    <p class='fade out brief big'>A nanoscopic progress bar. Featuring realistic
-    trickle animations to convince your users that something is happening!</p>
-  </header>
+      <div id="banner">
+        <span id="logo"></span>
 
-  <div class='contents fade out'>
-    <div class='controls'>
-      <p>
-        <button class='button play' id='b-0'></button>
-        <i>NProgress</i><b>.start()</b>
-        &mdash;
-        shows the progress bar
-      </p>
-      <p>
-        <button class='button play' id='b-40'></button>
-        <i>NProgress</i><b>.set(0.4)</b>
-        &mdash;
-        sets a percentage
-      </p>
-      <p>
-        <button class='button play' id='b-inc'></button>
-        <i>NProgress</i><b>.inc()</b>
-        &mdash;
-        increments by a little
-      </p>
-      <p>
-        <button class='button play' id='b-100'></button>
-        <i>NProgress</i><b>.done()</b>
-        &mdash;
-        completes the progress
-      </p>
+        <a href="https://github.com/pchiwan/nprogress" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/pchiwan/nprogress/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/pchiwan/nprogress/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+
+<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
+
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+
+<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/pchiwan">pchiwan</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
     </div>
-    <div class='actions'>
-      <a href='https://github.com/rstacruz/nprogress' class='button primary big'>
-        Download
-        v<span class='version'></span>
-      </a>
-      <p class='brief'>Perfect for Turbolinks, Pjax, and other Ajax-heavy apps.</p>
-    </div>
-    <div class='hr-rule'></div>
-    <div class='share-buttons'>
-      <iframe src="http://ghbtns.com/github-btn.html?user=rstacruz&repo=nprogress&type=watch&count=true"
-          allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
-      <iframe src="http://ghbtns.com/github-btn.html?user=rstacruz&type=follow&count=true"
-          allowtransparency="true" frameborder="0" scrolling="0" width="175" height="20"></iframe>
-      <a href="https://news.ycombinator.com/submit" class="hn-button" data-title="NProgress" data-url="http://ricostacruz.com/nprogress/" data-count="horizontal" data-style="twitter">HN</a>
-    </div>
-  </div>
-
-  <script>
-    $('body').show();
-    $('.version').text(NProgress.version);
-    NProgress.start();
-    setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); }, 1000);
-
-    $("#b-0").click(function() { NProgress.start(); });
-    $("#b-40").click(function() { NProgress.set(0.4); });
-    $("#b-inc").click(function() { NProgress.inc(); });
-    $("#b-100").click(function() { NProgress.done(); });
-  </script>
-
-  <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
-</body>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
 </html>

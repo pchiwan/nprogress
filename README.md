@@ -32,7 +32,7 @@ var np = new NProgress();
 # Configuration
 I've kept most of the original settings and added a few more. Check them out.
 
-### minimum:Decimal 
+### minimum
 Minimum percentage of increment. Default value is 0.05.
 
 ### easing

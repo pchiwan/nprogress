@@ -2,6 +2,7 @@
 * A stylized progress bar based on
 * NProgress (c) 2013, Rico Sta. Cruz
 * http://ricostacruz.com/nprogress/
+
 * by Sílvia Mur Blanch aka PchiwaN
 * http://github.com/pchiwan/nprogress
 ***********************************************/
@@ -18,13 +19,14 @@ function NProgress (_settings) {
     /// <para> ---------------------------------------------- </para>
     /// <para> trickle:Boolean -> Set to false to turn off the trickling (automatic progress increment). True by default. </para>
     /// <para> ---------------------------------------------- </para>
-    /// <para> trickeRate:Integer -> How much to increase per trickle.</para>
+    /// <para> trickleRate:Integer -> How much to increase per trickle.</para>
     /// <para> ---------------------------------------------- </para>
     /// <para> trickleSpeed:Integer -> How often to trickle, in milliseconds.</para>
     /// <para> ---------------------------------------------- </para>
     /// <para> showSpinner:Boolean -> Set to true to turn on the loading spinner. False by default</para>
     /// <para> ---------------------------------------------- </para>
-    /// <para> container:String -> jQuery selector of the container DOM element. The progress bar will be PREPENDED TO the container.</para>
+    /// <para> container:String -> jQuery selector of the container DOM element. The progress bar will be PREPENDED TO this container. If not set 
+    ///        -or if the selector is 'body'- the progress bar will be inserted BEFORE the body.</para>
     /// <para> ---------------------------------------------- </para>
     /// <para> renderOnInit:Boolean -> Set to true to render the progress bar upon instantiation (though it will remain hidden until the progress is set). False by default.</para>
     /// <para> ---------------------------------------------- </para>

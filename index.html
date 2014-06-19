@@ -18,7 +18,7 @@
 
       <header>
         <h1>NProgress-X</h1>
-        <p>For slim progress bars like on YouTube, Medium, etc</p>
+        <p>Slim progress bars that you can append to any part of your DOM.</p>
       </header>
 
       <div id="banner">
@@ -39,37 +39,142 @@
         <ul></ul>
       </nav>
       <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+        <h1>
+<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>I came across <a href="http://ricostacruz.com">Rico Sta. Cruz</a>'s awesome <a href="http://github.com/rstacruz">NProgress</a> while searching the web for cool tools to improve the 
+looks and responsiveness of the web application my colleague <a href="http://github.com/codecoding">codecoding</a> and I were working on at the time. 
+We had many many screens that displayed multiple controls which loaded data dynamically through AJAX requests. All these controls were
+independent from one another, and we thought it would be cool to display an animated progress bar on top of each of them. So we took 
+<a href="http://ricostacruz.com">Rico Sta. Cruz</a>'s <a href="http://github.com/rstacruz">NProgress</a>, forked it, refactored it, added to it, and created our very own 
+NProgress-X: a progress bar that you can append to any part of your DOM.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<p>NOTE: NProgress-X is so different to the original NProgress (and purposely so) that I have never thought of doing a pull request on GitHub, and never will.</p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<h1>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h1>
+
+<p>Add jQuery (1.8 or above), [nprogress.js] and [nprogress.css] to your project.</p>
+
+<h1>
+<a name="basic-usage" class="anchor" href="#basic-usage"><span class="octicon octicon-link"></span></a>Basic usage</h1>
+
+<p>I refactored the original NProgress mainly for the purpose of having multiple instances of it at once on the same page, so NProgress-X must be instantiated in order to be used. Like this:</p>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">np</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">NProgress</span><span class="p">();</span>
+</pre></div>
+
+<h1>
+<a name="configuration" class="anchor" href="#configuration"><span class="octicon octicon-link"></span></a>Configuration</h1>
+
+<p>I've kept most of the original settings and added a few more. Check them out.</p>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="minimum" class="anchor" href="#minimum"><span class="octicon octicon-link"></span></a>minimum</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>Minimum percentage of increment. Default value is 0.05.</p>
 
 <h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<a name="easing" class="anchor" href="#easing"><span class="octicon octicon-link"></span></a>easing</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>CSS easing string for the animation settings. Default value is 'ease'.</p>
 
 <h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a name="speed" class="anchor" href="#speed"><span class="octicon octicon-link"></span></a>speed</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>Animation speed in milliseconds. Default value is 200.</p>
+
+<h3>
+<a name="trickle" class="anchor" href="#trickle"><span class="octicon octicon-link"></span></a>trickle</h3>
+
+<p>Set to false to turn off the trickling (automatic progress increment). True by default.</p>
+
+<h3>
+<a name="tricklerate" class="anchor" href="#tricklerate"><span class="octicon octicon-link"></span></a>trickleRate</h3>
+
+<p>How much to increase per trickle. Default value is 0.02.</p>
+
+<h3>
+<a name="tricklespeed" class="anchor" href="#tricklespeed"><span class="octicon octicon-link"></span></a>trickleSpeed</h3>
+
+<p>How often to trickle, in milliseconds. Default value is 800.</p>
+
+<h3>
+<a name="container" class="anchor" href="#container"><span class="octicon octicon-link"></span></a>container</h3>
+
+<p>jQuery selector of the container DOM element. The progress bar will be PREPENDED TO this container (this means it will be inserted as the first child of the container element). 
+If you do not set this parameter -or if you use the selector 'body'- the progress bar will be inserted BEFORE the body (on the very top of the page).</p>
+
+<h3>
+<a name="renderoninit" class="anchor" href="#renderoninit"><span class="octicon octicon-link"></span></a>renderOnInit</h3>
+
+<p>Set to true to render the progress bar upon instantiation (though it will remain hidden until the progress is set). False by default.</p>
+
+<h3>
+<a name="removeonfinish" class="anchor" href="#removeonfinish"><span class="octicon octicon-link"></span></a>removeOnFinish</h3>
+
+<p>Set to true to remove the progress bar from the DOM when it reaches 100%. If you're gonna be reusing it a lot, you might as well leave it there -hidden- rather than creating it
+every time you want to display it. True by default.</p>
+
+<h3>
+<a name="randomtrickle" class="anchor" href="#randomtrickle"><span class="octicon octicon-link"></span></a>randomTrickle</h3>
+
+<p>Set to true to use random trickle increments. False by default.</p>
+
+<h3>
+<a name="startoninit" class="anchor" href="#startoninit"><span class="octicon octicon-link"></span></a>startOnInit</h3>
+
+<p>Set to true to start running the progress bar's progress upon instantiation. False by default.</p>
+
+<h3>
+<a name="template" class="anchor" href="#template"><span class="octicon octicon-link"></span></a>template</h3>
+
+<p>HTML markup used to render the progress bar. To keep the progress bar working, keep an element with <code>role='bar'</code> in there.</p>
+
+<p>Example:</p>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">np</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">NProgress</span><span class="p">({</span>
+    <span class="nx">minimum</span><span class="o">:</span> <span class="mf">0.08</span><span class="p">,</span>
+    <span class="nx">easing</span><span class="o">:</span> <span class="s1">'linear'</span><span class="p">,</span>
+    <span class="nx">speed</span><span class="o">:</span> <span class="mi">500</span><span class="p">,</span>
+    <span class="nx">trickle</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">trickleRate</span><span class="o">:</span> <span class="mf">0.05</span><span class="p">,</span>
+    <span class="nx">trickleSpeed</span><span class="o">:</span> <span class="mi">500</span><span class="p">,</span>
+    <span class="nx">container</span><span class="o">:</span> <span class="s1">'#divContainer'</span><span class="p">,</span>
+    <span class="nx">renderOnInit</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">removeOnFinish</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">startOnInit</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">template</span><span class="o">:</span> <span class="s1">'&lt;div class="foo" role="bar"&gt;&lt;/div&gt;'</span>
+<span class="p">});</span>
+</pre></div>
+
+<h1>
+<a name="methods" class="anchor" href="#methods"><span class="octicon octicon-link"></span></a>Methods</h1>
+
+<h1>
+<a name="ideas" class="anchor" href="#ideas"><span class="octicon octicon-link"></span></a>Ideas</h1>
+
+<ul>
+<li><p>Add progress to your Ajax calls! Bind it to the jQuery <code>ajaxStart</code> and
+<code>ajaxStop</code> events.</p></li>
+<li><p>Make a fancy loading bar even without Turbolinks/Pjax! Bind it to
+<code>$(document).ready</code> and <code>$(window).load</code>.</p></li>
+</ul><h1>
+<a name="customization" class="anchor" href="#customization"><span class="octicon octicon-link"></span></a>Customization</h1>
+
+<p>Just edit <code>nprogress.css</code> to your liking. Tip: you probably only want to find
+and replace occurances of <code>#29d</code>.</p>
+
+<p>The included CSS file is pretty minimal... in fact, feel free to scrap it and
+make your own!</p>
+
+<h1>
+<a name="acknowledgements" class="anchor" href="#acknowledgements"><span class="octicon octicon-link"></span></a>Acknowledgements</h1>
+
+<p>Give credit where it's due!</p>
+
+<p>The original <a href="http://github.com/rstacruz">NProgress</a> is authored and maintained by <a href="http://ricostacruz.com">Rico Sta. Cruz</a> with help from 
+his <a href="http://github.com/rstacruz/nprogress/contributors">contributors</a>.</p>
       </section>
       <footer>
         <p>Project maintained by <a href="https://github.com/pchiwan">pchiwan</a></p>

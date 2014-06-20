@@ -61,7 +61,7 @@ function NProgress (_settings) {
     this.settings = $.extend({}, Settings, _settings);
 
     this.version = '0.1.2';
-    this.id = self.settings.container === 'body' ? '#nprogress' + self.settings.container + ' #nprogress';
+    this.id = self.settings.container === 'body' ? '#nprogress' : self.settings.container + ' #nprogress';
 
     //the DOM element itself
     var $progress;

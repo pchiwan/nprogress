@@ -2,7 +2,6 @@
 @import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);
 header{
 	min-height: 120px;
-	box-shadow: none;
 	position: relative;
 	padding: 70px 0 10px 0 !important;
 	background-image: url("../images/header.png");

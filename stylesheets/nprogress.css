@@ -4,7 +4,7 @@ header{
 	min-height: 120px;
 	box-shadow: none;
 	position: relative;
-	padding: 10px 0 70px 0 !important;
+	padding: 70px 0 10px 0 !important;
 	background-image: url("../images/header.png");
 	background-color: #807A7A;
 }

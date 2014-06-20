@@ -4,10 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>NProgress-X by pchiwan</title>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/nprogress.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://rawgit.com/pchiwan/nprogress/master/nprogress.js"></script>
     <script src="javascripts/main.js"></script>
+
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -17,15 +21,15 @@
   <body>
 
       <header>
-        <h1>NProgress-X</h1>
+        <h1>NProgress<span class="x">-X</span></h1>
         <p>Slim progress bars that you can append to any part of your DOM.</p>
       </header>
 
-      <div id="banner">
-        <span id="logo"></span>
-
-        <a href="https://github.com/pchiwan/nprogress" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
+      <div id="banner" class="row-fluid">
+        <div class="span3 offset3">
+          <a href="https://github.com/pchiwan/nprogress" class="button fork"><strong>View On GitHub</strong></a>
+        </div>
+        <div class="downloads span4 offset1">
           <span>Downloads:</span>
           <ul>
             <li><a href="https://github.com/pchiwan/nprogress/zipball/master" class="button">ZIP</a></li>
@@ -34,11 +38,12 @@
         </div>
       </div><!-- end banner -->
 
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
+    <div class="wrapper container-fluid">
+      <div class="row-fluid">      
+        <nav class="span2">
+          <ul></ul>
+        </nav>
+        <section class="span8">
         <h1>
 <a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h1>
 
@@ -54,7 +59,7 @@ NProgress-X: a progress bar that you can append to any part of your DOM.</p>
 <h1>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h1>
 
-<p>Add jQuery (1.8 or above), [nprogress.js] and [nprogress.css] to your project.</p>
+<p>Add jQuery (1.8 or above), <a href="http://rawgit.com/pchiwan/nprogress/master/nprogress.js">nprogress.js</a> and <a href="http://rawgit.com/pchiwan/nprogress/master/nprogress.css">nprogress.css</a> to your project.</p>
 
 <h1>
 <a name="basic-usage" class="anchor" href="#basic-usage"><span class="octicon octicon-link"></span></a>Basic usage</h1>
@@ -175,8 +180,9 @@ make your own!</p>
 
 <p>The original <a href="http://github.com/rstacruz">NProgress</a> is authored and maintained by <a href="http://ricostacruz.com">Rico Sta. Cruz</a> with help from 
 his <a href="http://github.com/rstacruz/nprogress/contributors">contributors</a>.</p>
-      </section>
-      <footer>
+        </section>
+      </div>
+      <footer class="row-fluid">
         <p>Project maintained by <a href="https://github.com/pchiwan">pchiwan</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
       </footer>

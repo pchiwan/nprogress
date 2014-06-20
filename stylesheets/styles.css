@@ -2,45 +2,8 @@
 Leap Day for GitHub Pages
 by Matt Graham
 */
-@font-face {
-  font-family: 'Quattrocento Sans';
-  src: url("../fonts/quattrocentosans-bold-webfont.eot");
-  src: url("../fonts/quattrocentosans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/quattrocentosans-bold-webfont.woff") format("woff"), url("../fonts/quattrocentosans-bold-webfont.ttf") format("truetype"), url("../fonts/quattrocentosans-bold-webfont.svg#QuattrocentoSansBold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Quattrocento Sans';
-  src: url("../fonts/quattrocentosans-bolditalic-webfont.eot");
-  src: url("../fonts/quattrocentosans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/quattrocentosans-bolditalic-webfont.woff") format("woff"), url("../fonts/quattrocentosans-bolditalic-webfont.ttf") format("truetype"), url("../fonts/quattrocentosans-bolditalic-webfont.svg#QuattrocentoSansBoldItalic") format("svg");
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Quattrocento Sans';
-  src: url("../fonts/quattrocentosans-italic-webfont.eot");
-  src: url("../fonts/quattrocentosans-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/quattrocentosans-italic-webfont.woff") format("woff"), url("../fonts/quattrocentosans-italic-webfont.ttf") format("truetype"), url("../fonts/quattrocentosans-italic-webfont.svg#QuattrocentoSansItalic") format("svg");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Quattrocento Sans';
-  src: url("../fonts/quattrocentosans-regular-webfont.eot");
-  src: url("../fonts/quattrocentosans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/quattrocentosans-regular-webfont.woff") format("woff"), url("../fonts/quattrocentosans-regular-webfont.ttf") format("truetype"), url("../fonts/quattrocentosans-regular-webfont.svg#QuattrocentoSansRegular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Copse';
-  src: url("../fonts/copse-regular-webfont.eot");
-  src: url("../fonts/copse-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/copse-regular-webfont.woff") format("woff"), url("../fonts/copse-regular-webfont.ttf") format("truetype"), url("../fonts/copse-regular-webfont.svg#CopseRegular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
+@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans);
+@import url(http://fonts.googleapis.com/css?family=Coustard);
 
 /* normalize.css 2012-02-07T12:37 UTC - http://github.com/necolas/normalize.css */
 /* =============================================================================
@@ -564,12 +527,6 @@ strong {
   color: #333;
 }
 
-.wrapper {
-  width: 650px;
-  margin: 0 auto;
-  position: relative;
-}
-
 section img {
   max-width: 100%;
 }
@@ -652,12 +609,6 @@ dt {
 
 header {
   padding: 25px 20px 40px 20px;
-  margin: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
   text-align: center;
   background: url(../images/background.png) #4276b6;
   -moz-box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.75);
@@ -669,15 +620,13 @@ header {
   min-height: 76px;
 }
 header h1 {
-  font: 40px/48px "Copse", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Coustard", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 48px;
+  font-weight: bold;
   color: #f3f3f3;
   text-shadow: 0px 2px 0px #235796;
   margin: 0px;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  -ms-text-overflow: ellipsis;
 }
 header p {
   color: #d8d8d8;
@@ -688,14 +637,9 @@ header p {
 
 #banner {
   z-index: 100;
-  left: 0;
-  right: 50%;
-  height: 50px;
-  margin-right: -382px;
-  position: fixed;
-  top: 115px;
   background: #ffcc00;
   border: 1px solid #f0b500;
+  padding-top: 4px;
   -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   -o-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
@@ -706,7 +650,6 @@ header p {
   -ms-border-radius: 0px 2px 2px 0px;
   -khtml-border-radius: 0px 2px 2px 0px;
   border-radius: 0px 2px 2px 0px;
-  padding-right: 10px;
 }
 #banner .button {
   border: 1px solid #dba500;
@@ -747,12 +690,6 @@ header p {
   background-color: #ffeca0;
 }
 #banner .fork {
-  position: fixed;
-  left: 50%;
-  margin-left: -325px;
-  padding: 10px 12px;
-  margin-top: 6px;
-  line-height: 14px;
   font-size: 14px;
   background-color: #FFE788;
 }
@@ -770,7 +707,7 @@ header p {
 }
 #banner ul {
   list-style: none;
-  height: 40px;
+  height: 30px;
   padding: 0;
   float: left;
   margin-left: 10px;
@@ -782,21 +719,12 @@ header p {
   background-color: #FFE788;
 }
 #banner #logo {
-  position: absolute;
-  height: 36px;
-  width: 36px;
-  right: 7px;
-  top: 7px;
-  display: block;
+  display: inline-block;
   background: url(../images/octocat-logo.png);
 }
 
 section {
-  width: 590px;
   padding: 30px 30px 50px 30px;
-  margin: 20px 0;
-  margin-top: 190px;
-  position: relative;
   background: #fbfbfb;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -815,12 +743,7 @@ small {
   font-size: 12px;
 }
 
-nav {
-  width: 230px;
-  position: fixed;
-  top: 220px;
-  left: 50%;
-  margin-left: -580px;
+nav {  
   text-align: right;
 }
 nav ul {
@@ -851,21 +774,12 @@ nav ul a:hover {
 }
 
 footer {
-  width: 180px;
-  position: fixed;
-  left: 50%;
-  margin-left: -530px;
-  bottom: 20px;
   text-align: right;
   line-height: 16px;
 }
 
 @media print, screen and (max-width: 1060px) {
-  div.wrapper {
-    width: auto;
-    margin: 0;
-  }
-
+  
   nav {
     display: none;
   }
@@ -893,19 +807,11 @@ footer {
 
   section {
     border: 1px solid #e5e5e5;
-    border-width: 1px 0;
-    padding: 20px auto;
-    margin: 190px auto 20px;
-    max-width: 600px;
+    border-width: 1px 0;    
   }
 
   footer {
-    text-align: center;
-    margin: 20px auto;
-    position: relative;
-    left: auto;
-    bottom: auto;
-    width: auto;
+    text-align: center;    
   }
 }
 @media print, screen and (max-width: 720px) {
@@ -988,10 +894,6 @@ footer {
   footer {
     text-align: center;
     margin: 20px auto;
-    position: relative;
-    left: auto;
-    bottom: auto;
-    width: auto;
   }
 }
 @media print, screen and (max-height: 480px) {
@@ -1002,9 +904,5 @@ footer {
   footer {
     text-align: center;
     margin: 20px auto;
-    position: relative;
-    left: auto;
-    bottom: auto;
-    width: auto;
   }
 }

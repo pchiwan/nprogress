@@ -1,0 +1,36 @@
+@import url(http://fonts.googleapis.com/css?family=Knewave);
+@import url(http://fonts.googleapis.com/css?family=Share+Tech);
+header{
+	min-height: 120px;
+	box-shadow: none;
+	position: relative;
+	padding-bottom: 30px;	
+	background-image: url("../images/header.png");
+}
+header h1{
+	text-shadow: 3px 3px 0 #244792;
+	color: #FFCC00;
+	font-size: 60px;	
+}
+header h1 .x{
+  font-family: 'Knewave';
+  font-size: 65px;  
+}
+header p{
+	font-family: 'Share Tech';
+	color: #EAEDF2;
+	font-size: 20px;
+	text-shadow: 2px 2px 0 #244792;
+}
+body{
+	background-image: url("../images/wavegrid.png");
+}
+.wrapper{
+	margin-top: 40px;
+}
+.wrapper p{
+	text-align: justify;
+}
+footer p{
+	text-align: center !important;
+}

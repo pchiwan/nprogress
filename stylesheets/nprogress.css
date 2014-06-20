@@ -6,6 +6,7 @@ header{
 	position: relative;
 	padding-bottom: 30px;	
 	background-image: url("../images/header.png");
+	background-color: #807A7A;
 }
 header h1{
 	text-shadow: 5px 5px 3px #244792;

@@ -1,26 +1,34 @@
+@import url(http://fonts.googleapis.com/css?family=Wendy+One);
 @import url(http://fonts.googleapis.com/css?family=Knewave);
 @import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);
 header{
 	min-height: 120px;
 	position: relative;
 	padding: 70px 0 10px 0 !important;
-	background-image: url("../images/header.png");
-	background-color: #807A7A;
+	background: none;
+	background-color: transparent;
+	box-shadow: none;
 }
 header h1{
-	text-shadow: 5px 5px 3px #244792;
-	color: #FFCC00;
-	font-size: 60px;	
+	font-family: 'Wendy One';
+	text-shadow: 4px 4px 2px #244792;
+	color: #F1861C;
+	font-size: 66px;	
 }
 header h1 .x{
   font-family: Knewave;
-  font-size: 65px;  
+  font-size: 72px;  
 }
 header p{
 	font-family: 'Shadows Into Light Two';
-	color: #EAEDF2;
+	color: #3860B4;
 	font-size: 22px;
-	text-shadow: 2px 2px 0 #244792;
+	font-weight: bold;
+	text-shadow: 3px 3px 2px #BBBBBB;
+	margin-top: 5px;
+}
+.wrapper h1, .wrapper h2, .wrapper h3{
+	font-family: 'Shadows Into Light Two';
 }
 body{
 	background-image: url("../images/wavegrid.png");

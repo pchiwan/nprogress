@@ -3,7 +3,6 @@ Leap Day for GitHub Pages
 by Matt Graham
 */
 @import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans);
-@import url(http://fonts.googleapis.com/css?family=Coustard);
 
 /* normalize.css 2012-02-07T12:37 UTC - http://github.com/necolas/normalize.css */
 /* =============================================================================
@@ -618,7 +617,7 @@ header {
   min-height: 76px;
 }
 header h1 {
-  font-family: "Coustard", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 48px;
   font-weight: bold;
   color: #f3f3f3;

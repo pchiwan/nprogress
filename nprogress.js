@@ -258,7 +258,7 @@ function NProgress (_settings) {
     */
     this.getPositioningCSS = function () {
         //SMB rewritten: use Modernizr to know whether we can use CSS transforms or not
-        if (Modernizr.csstransforms) {
+        if (window.Modernizr && Modernizr.csstransforms) {
             // Modern browsers with CSS3 support, e.g. Webkit, IE9+
             return 'scaleX';
         } else {
@@ -297,7 +297,7 @@ function NProgress (_settings) {
 
         var perc = fromStart ? 0 : toBarPerc(self.status || 0);
 
-        if (Modernizr.csstransforms) {
+        if (window.Modernizr && Modernizr.csstransforms) {
             $progress.find('[role="bar"]').css({
                 transition: 'all 0 linear',
                 transform: 'scaleX(' + perc + ')'

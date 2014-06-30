@@ -73,7 +73,7 @@
     <p>I refactored the original NProgress mainly for the purpose of having multiple instances of it at once on the same page, so NProgress-X must be instantiated in order to be used. Like this:</p>
 
     <div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">np</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">NProgress</span><span class="p">();</span>
-    </pre></div>
+</pre></div>
 
     <h1>
     <a name="configuration" class="anchor" href="#configuration"><span class="octicon octicon-link"></span></a>Configuration</h1>
@@ -145,19 +145,19 @@
     <p>Example:</p>
 
     <div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">np</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">NProgress</span><span class="p">({</span>
-        <span class="nx">minimum</span><span class="o">:</span> <span class="mf">0.08</span><span class="p">,</span>
-        <span class="nx">easing</span><span class="o">:</span> <span class="s1">'linear'</span><span class="p">,</span>
-        <span class="nx">speed</span><span class="o">:</span> <span class="mi">500</span><span class="p">,</span>
-        <span class="nx">trickle</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nx">trickleRate</span><span class="o">:</span> <span class="mf">0.05</span><span class="p">,</span>
-        <span class="nx">trickleSpeed</span><span class="o">:</span> <span class="mi">500</span><span class="p">,</span>
-        <span class="nx">container</span><span class="o">:</span> <span class="s1">'#divContainer'</span><span class="p">,</span>
-        <span class="nx">renderOnInit</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nx">removeOnFinish</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nx">startOnInit</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nx">template</span><span class="o">:</span> <span class="s1">'&lt;div class="foo" role="bar"&gt;&lt;/div&gt;'</span>
-    <span class="p">});</span>
-    </pre></div>
+    <span class="nx">minimum</span><span class="o">:</span> <span class="mf">0.08</span><span class="p">,</span>
+    <span class="nx">easing</span><span class="o">:</span> <span class="s1">'linear'</span><span class="p">,</span>
+    <span class="nx">speed</span><span class="o">:</span> <span class="mi">500</span><span class="p">,</span>
+    <span class="nx">trickle</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">trickleRate</span><span class="o">:</span> <span class="mf">0.05</span><span class="p">,</span>
+    <span class="nx">trickleSpeed</span><span class="o">:</span> <span class="mi">500</span><span class="p">,</span>
+    <span class="nx">container</span><span class="o">:</span> <span class="s1">'#divContainer'</span><span class="p">,</span>
+    <span class="nx">renderOnInit</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">removeOnFinish</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">startOnInit</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">template</span><span class="o">:</span> <span class="s1">'&lt;div class="foo" role="bar"&gt;&lt;/div&gt;'</span>
+<span class="p">});</span>
+</pre></div>
 
     <h1>
     <a name="methods" class="anchor" href="#methods"><span class="octicon octicon-link"></span></a>Methods</h1>
@@ -165,67 +165,75 @@
     <h3>    
     <a name="configure" class="anchor" href="#configure"><span class="octicon octicon-link"></span></a>configure</h3>
 
-    <p>TODO.</p>
+    <p>Override the initial configuration of an <code>nprogress</code> instance anytime by using this method.</p>
+
+    <div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">np</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">NProgress</span><span class="p">();</span>
+<span class="nx">np</span><span class="p">.</span><span class="nx">configure</span><span class="p">({</span>
+    <span class="nx">trickleRate</span><span class="o">:</span> <span class="mf">0.05</span><span class="p">,</span>
+    <span class="nx">trickleSpeed</span><span class="o">:</span> <span class="mi">500</span><span class="p">,</span>
+    <span class="nx">startOnInit</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">});</span>
+</pre></div>
 
     <h3>
     <a name="set" class="anchor" href="#set"><span class="octicon octicon-link"></span></a>set</h3>
 
-    <p>TODO.</p>
+    <p>Sets the progress bar status, where <em>n</em> is a number from <code>0.0</code> to <code>1.0</code>.</p>
 
     <h3>
     <a name="isStarted" class="anchor" href="#isStarted"><span class="octicon octicon-link"></span></a>isStarted</h3>
 
-    <p>TODO.</p>
+    <p>This method will tell you whether the progress bar is already running or not.</p>
 
     <h3>
     <a name="start" class="anchor" href="#start"><span class="octicon octicon-link"></span></a>start</h3>
 
-    <p>TODO.</p>
+    <p>Shows the progress bar. This is the same as setting the status to 0%, except that it doesn't go backwards.</p>
 
     <h3>
     <a name="done" class="anchor" href="#done"><span class="octicon octicon-link"></span></a>done</h3>
 
-    <p>TODO.</p>
+    <p>Hides the progress bar. This is *sort of* the same as setting the status to 100%, with the difference being <code>.done()</code> makes some placebo effect of some realistic motion by executing an animation. By passing <code>true</code> to <code>.done()</code>, it will show the progress bar even if it's not being shown. (The default behavior is that <code>.done()</code> will not do anything if the progress bar is not started.</p>
 
     <h3>
     <a name="stop" class="anchor" href="#stop"><span class="octicon octicon-link"></span></a>stop</h3>
 
-    <p>TODO.</p>
+    <p>Actually it's just a call to <code>.reset()</code>, which stops the progress bar's progress regardless of what its current status is. But the name is more intuitive and the purpose of this is to give the idea that something went wrong and therefore the progress bar could not reach its 100% successfully.</p>
 
     <h3>
     <a name="pause" class="anchor" href="#pause"><span class="octicon octicon-link"></span></a>pause</h3>
 
-    <p>TODO.</p>
+    <p>Pause the progress bar's progress. It will start running again and pick up  from where it left off by calling <code>keepGoing</code>.</p>
 
     <h3>
     <a name="keepGoing" class="anchor" href="#keepGoing"><span class="octicon octicon-link"></span></a>keepGoing</h3>
 
-    <p>TODO.</p>
+    <p>Starts running the progress bar's progress again after it's been paused. It picks up status from where it left off.</p>
 
     <h3>
     <a name="reset" class="anchor" href="#reset"><span class="octicon octicon-link"></span></a>reset</h3>
 
-    <p>TODO.</p>
+    <p>Reset's the progress bar after it's done, so it can start running again anytime.</p>
 
     <h3>
     <a name="inc" class="anchor" href="#inc"><span class="octicon octicon-link"></span></a>inc</h3>
 
-    <p>TODO.</p>
+    <p>Increments the progress bar's percentage by a specific amount.</p>
 
     <h3>
     <a name="trickle" class="anchor" href="#trickle"><span class="octicon octicon-link"></span></a>trickle</h3>
 
-    <p>TODO.</p>
+    <p>Increments the progress bar's percentage by a random amount.</p>
 
     <h3>
     <a name="remove" class="anchor" href="#remove"><span class="octicon octicon-link"></span></a>remove</h3>
 
-    <p>TODO.</p>    
+    <p>Removes the progress bar from the DOM. Opposite of <code>.render()</code>.</p>    
 
     <h3>
     <a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>demo</h3>
 
-    <p>TODO.</p>
+    <p>Runs the progress bar in demo mode.</p>
 
     <h1>
     <a name="ideas" class="anchor" href="#ideas"><span class="octicon octicon-link"></span></a>Ideas</h1>

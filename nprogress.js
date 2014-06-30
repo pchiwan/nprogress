@@ -293,7 +293,7 @@ function NProgress (_settings) {
         if (isRendered()) { return $progress; }
         $('html').addClass('nprogress-busy');
 
-        $progress = $('<div id="nprogress" class="nprogress"></div>');
+        $progress = $('<div id="nprogress" class="nprogress"></div>');        
         $progress.append($(self.settings.template));
 
         var perc = fromStart ? 0 : toBarPerc(self.status || 0);
@@ -315,11 +315,11 @@ function NProgress (_settings) {
         if (self.settings.container === 'body') {
             //if the container is the body, place progress bar right before it
             $(self.settings.container).before($progress);
+            $progress.find('[role="bar"]').css('position', 'fixed');
             $progress.find('.peg').show();
         } else {
             //otherwise, prepend the progress bar to the container element
             $progress.prependTo(self.settings.container + ':first');
-            $progress.css('margin-bottom', '1px');
         }
     }
 

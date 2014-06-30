@@ -2,7 +2,11 @@
 $(document).ready(function () {
 
 	//stick this one to the top of the body
-	var npBody = new NProgress();
+	var npBody = new NProgress({
+		container: '.body',
+		renderOnInit: true,
+		removeOnFinish: false
+	});
 	npBody.done(true);
 
 	var npOne = new NProgress({

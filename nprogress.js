@@ -159,8 +159,9 @@ function NProgress (_settings) {
 
     /**
     * Hides the progress bar.
-    * This is the *sort of* the same as setting the status to 100%, with the
-    * difference being `done()` makes some placebo effect of some realistic motion.
+    * This is *sort of* the same as setting the status to 100%, with the
+    * difference being `done()` makes some placebo effect of some realistic motion
+    * by executing an animation.
     *
     * NProgress.done();
     *
@@ -177,7 +178,7 @@ function NProgress (_settings) {
 
     /**
     * Actually it's just a call to `reset`, which stops the progress bar's progress, 
-    * regardless of what its current status is. But the name if more intuitive and 
+    * regardless of what its current status is. But the name is more intuitive and 
     * the purpose of this is to give the idea that something went wrong and therefore 
     * the progress could not reach the end successfully.
     */

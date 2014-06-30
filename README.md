@@ -90,7 +90,53 @@ var np = new NProgress({
 
 # Methods
 
+### configure
+Override the initial configuration of an `nprogress` instance anytime by using this method.
 
+```javascript
+var np = new NProgress();
+np.configure({
+    trickleRate: 0.05,
+    trickleSpeed: 500,
+    startOnInit: true
+});
+```
+
+### set
+Sets the progress bar status, where _n_ is a number from `0.0` to `1.0`.
+
+### isStarted
+This method will tell you whether the progress bar is already running or not.
+
+### start
+Shows the progress bar. This is the same as setting the status to 0%, except that it doesn't go backwards.
+
+### done
+Hides the progress bar. This is *sort of* the same as setting the status to 100%, with the difference being `.done()` makes some placebo effect of some realistic motion by executing an animation. By passing `true` to `.done()`, it will show the progress bar even if it's not being shown. (The default behavior is that `.done()` will not do anything if the progress bar is not started.
+
+### stop
+Actually it's just a call to `.reset()`, which stops the progress bar's progress regardless of what its current status is. But the name is more intuitive and the purpose of this is to give the idea that something went wrong and therefore the progress bar could not reach its 100% successfully.
+
+### pause
+Pause the progress bar's progress. It will start running again and pick up from where it left off by calling `.keepGoing()`.
+
+### keepGoing
+Starts running the progress bar's progress again after it's been paused. It picks up status from where it left off.
+
+### reset
+Reset's the progress bar after it's done, so it can start running again anytime.
+
+### inc
+Increments the progress bar's percentage by a specific amount.
+
+### trickle
+Increments the progress bar's percentage by the specified `trickleRate` if `randomTrickle` was set to `false`, or by a random amount if `randomTrickle` was set to `true`.
+
+### remove
+Removes the progress bar from the DOM. Opposite of `.render()`.
+
+### demo
+Runs the progress bar in demo mode.
 
 # Ideas
  * Add progress to your Ajax calls! Bind it to the jQuery `ajaxStart` and
@@ -111,5 +157,4 @@ make your own!
 # Acknowledgements
 Give credit where it's due!
 
-The original [NProgress](http://github.com/rstacruz) is authored and maintained by [Rico Sta. Cruz](http://ricostacruz.com) with help from 
-his [contributors](http://github.com/rstacruz/nprogress/contributors).
+The original [NProgress](http://github.com/rstacruz) is authored and maintained by [Rico Sta. Cruz](http://ricostacruz.com) with help from his [contributors](http://github.com/rstacruz/nprogress/contributors). You will probably acknowledge that I've taken many definitions straight from Rico's source code comments, and also taken some design ideas and styles from his project's website. But I've done it with the purpose of paying homage to him, not for plagiarism!

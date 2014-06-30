@@ -20,12 +20,12 @@ header h1 .x{
   font-size: 72px;  
 }
 header p{
-	font-family: 'Shadows Into Light Two';
+	/*font-family: 'Shadows Into Light Two';*/
 	color: #3860B4;
 	font-size: 22px;
 	font-weight: bold;
-	text-shadow: 3px 3px 2px #BBBBBB;
-	margin-top: 5px;
+	text-shadow: 1px 1px 2px #BBBBBB;
+	margin-top: 10px;
 }
 .wrapper h1, .wrapper h2, .wrapper h3{
 	font-family: 'Shadows Into Light Two';

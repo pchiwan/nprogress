@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="stylesheets/nprogress.css">
     <link rel="stylesheet" href="http://rawgit.com/pchiwan/nprogress/master/nprogress.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js"></script>
     <script type="text/javascript" src="http://rawgit.com/pchiwan/nprogress/master/nprogress.js"></script>
+    <script src="javascripts/demo.js"></script>
     <script src="javascripts/main.js"></script>
 
     <!--[if lt IE 9]>
@@ -223,7 +225,7 @@
     <h3>
     <a name="trickle" class="anchor" href="#trickle"><span class="octicon octicon-link"></span></a>trickle</h3>
 
-    <p>Increments the progress bar's percentage by a random amount.</p>
+    <p>Increments the progress bar's percentage by the specified <code>trickleRate</code> if <code>randomTrickle</code> was set to <code>false</code>, or by a random amount if <code>randomTrickle</code> was set to <code>true</code>.</p>
 
     <h3>
     <a name="remove" class="anchor" href="#remove"><span class="octicon octicon-link"></span></a>remove</h3>
@@ -253,12 +255,59 @@
     make your own!</p>
 
     <h1>
+    <a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h1>
+
+    <div class="demoone">
+        <div class="demotwo">
+            <table id="demotwo">
+                <thead>
+                    <tr>
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                        <th>Column 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lorem ipsum</td>
+                        <td>Dolor sit amet</td>
+                        <td>Consectetur adipisicing elit</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="demothree">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+    </div>
+    <div class="controls">
+        <div class="subcontrols">
+            <p class="title"><strong>Progress bar 1</strong></p>
+            <p><button class="button play" data-bind="click:npOne.start"></button><span>npOne<strong>.start()</strong></span></p>
+            <p><button class="button play" data-bind="click:npOne.done"></button><span>npOne<strong>.done()</strong></span></p>
+            <p><button class="button play" data-bind="click:function () { npOne.inc(0.2); }"></button><span>npOne<strong>.inc(0.2)</strong></span></p>
+        </div>
+        <div class="subcontrols">
+            <p class="title"><strong>Progress bar 2</strong></p>
+            <p><button class="button play" data-bind="click:npTwo.start"></button><span>npTwo<strong>.start()</strong></span></p>
+            <p><button class="button play" data-bind="click:npTwo.pause"></button><span>npTwo<strong>.pause()</strong></span></p>
+            <p><button class="button play" data-bind="click:npTwo.keepGoing"></button><span>npTwo<strong>.keepGoing()</strong></span></p>
+            <p><button class="button play" data-bind="click:npTwo.stop"></button><span>npTwo<strong>.stop()</strong></span></p>
+        </div>
+        <div class="subcontrols">
+            <p class="title"><strong>Progress bar 3</strong></p>
+            <p><button class="button play" data-bind="click:npThree.start"></button><span>npThree<strong>.start()</strong></span></p>
+            <p><button class="button play" data-bind="click:npThree.trickle"></button><span>npThree<strong>.trickle()</strong></span></p>
+            <p><button class="button play" data-bind="click:npThree.done"></button><span>npThree<strong>.done()</strong></span></p>
+        </div>
+    </div>
+
+    <h1>
     <a name="acknowledgements" class="anchor" href="#acknowledgements"><span class="octicon octicon-link"></span></a>Acknowledgements</h1>
 
     <p>Give credit where it's due!</p>
-
     <p>The original <a href="http://github.com/rstacruz">NProgress</a> is authored and maintained by <a href="http://ricostacruz.com">Rico Sta. Cruz</a> with help from 
-    his <a href="http://github.com/rstacruz/nprogress/contributors">contributors</a>.</p>
+    his <a href="http://github.com/rstacruz/nprogress/contributors">contributors</a>. You will probably acknowledge that I've taken many definitions straight from Rico's source code comments, and also taken some design ideas and styles from his project's website. But I've done it with the purpose of paying homage to him, not for plagiarism!</p>
             </section>
           </div>
         </div>

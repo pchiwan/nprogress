@@ -54,3 +54,77 @@ footer p{
 	top: 0px; 
 	z-index: 1000;
 }
+.demoone{
+	margin-top: 20px;
+	border: 1px solid #bbb;
+	border-radius: 3px;
+	width: 100%;
+	height: 180px;
+}
+.demotwo{
+	margin: 20px;
+}
+.demotwo table{
+	border: 1px solid #ccc;
+}
+.demotwo th{
+	background-color: #F1861C;
+	color: #fff;
+}
+.demotwo td{
+	border: 1px solid #ccc;
+	margin: 20px;
+}
+.demothree{
+	margin: 20px; 
+	margin-top: 40px; 
+	text-align: center; 
+	border-top: 1px solid #ccc;
+}
+.controls{
+	margin: 20px 0;
+}
+.controls p{	
+	margin: 8px 0;
+	margin-left: 50px;
+}
+.controls p.title{
+	font-family: 'Shadows Into Light Two';
+	font-size: 16px;
+	text-align: center;
+	margin-left: 0;
+}
+.controls p span{
+	margin-left: 10px;
+}
+.subcontrols{
+	vertical-align: top;
+	display: inline-block;
+	width: 33%;
+}
+.button {
+    background-color: #eee;
+    border-radius: 2px;
+    color: #777;
+    display: inline-block;
+    font-weight: 700;
+    padding: 8px 10px;
+    text-align: left;
+    text-decoration: none;
+}
+.button:hover{
+	background-color: #ddd;
+}
+.button:active{
+	background-color: #f1861c;
+}
+button {
+    border: 0 none;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    cursor: pointer;
+}
+.button.play:before {
+	content: "▶";
+}

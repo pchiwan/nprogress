@@ -128,3 +128,11 @@ button {
 .button.play:before {
 	content: "▶";
 }
+code{
+	background-color: transparent;
+	border: none;
+	color: #000;
+	text-shadow: none;
+	padding: 0;
+	margin: 0;
+}

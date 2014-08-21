@@ -4,7 +4,7 @@
 header{
 	min-height: 120px;
 	position: relative;
-	padding: 70px 0 10px 0 !important;
+	padding: 30px 0 10px 0 !important;
 	background: none;
 	background-color: transparent;
 	box-shadow: none;
@@ -25,7 +25,7 @@ header p{
 	font-size: 22px;
 	font-weight: bold;
 	text-shadow: 1px 1px 2px #BBBBBB;
-	margin-top: 10px;
+	margin-top: 20px;
 }
 .wrapper h1, .wrapper h2, .wrapper h3{
 	font-family: 'Shadows Into Light Two';

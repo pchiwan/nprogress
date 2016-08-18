@@ -1,0 +1,19 @@
+{
+  "name": "nprogress-x",
+  "version": "1.0.0",
+  "description": "Slim progress bars that you can append to any part of your DOM. Based on and forked from Rico Sta. Cruz's NProgress.",
+  "main": "nprogress.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pchiwan/nprogress.git"
+  },
+  "author": "Sílvia Mur <silvia.murblanch@gmail.com> (http://pchiwan.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pchiwan/nprogress/issues"
+  },
+  "homepage": "https://github.com/pchiwan/nprogress#readme",
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}
